@@ -14,8 +14,8 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping("/viewdata")
-    public String viewdata(Model model) {
+    @GetMapping("/view")
+    public String view(Model model) {
         model.addAttribute("users", userRepository.findAll());
         return "viewdata";
     }
